@@ -921,6 +921,7 @@
     ═══════════════════════════════ */
     @keyframes fadeDown  { from { opacity:0; transform:translateY(-16px); } to { opacity:1; transform:none; } }
     @keyframes fadeUp    { from { opacity:0; transform:translateY(28px);  } to { opacity:1; transform:none; } }
+    @keyframes bounceHint { 0%,100% { transform: translateY(0); } 50% { transform: translateY(3px); } }
     @keyframes pulseDot  {
       0%,100%{ opacity:1; transform:scale(1); }
       50%    { opacity:0.4; transform:scale(0.75); }
@@ -943,6 +944,7 @@
       }
       .nav-icon {
         left: 18px;
+        top: calc(50% + 5px);
       }
       /* Hero cycling text — allow wrap on mobile */
       .hero-cycle-wrap {
@@ -1043,7 +1045,26 @@
         skew: none;
         padding: 18px 20px;
       }
-      .display-card::after { display: none !important; }
+      /* Chevron expand hint — replaces gradient ::after on mobile */
+      .display-card:not(.dc-active)::after {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        content: '';
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.45)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 18px 18px;
+        position: absolute;
+        bottom: 10px;
+        right: 14px;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background-color: rgba(255,255,255,0.06);
+        animation: bounceHint 1.8s ease-in-out infinite;
+      }
+      .display-card.dc-active::after { display: none !important; }
       .display-card.has-overlay::before { opacity: 0 !important; }
       .dc-back, .dc-mid2, .dc-mid1, .dc-front {
         transform: none !important;
