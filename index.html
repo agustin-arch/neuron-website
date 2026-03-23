@@ -944,6 +944,11 @@
       .nav-icon {
         left: 18px;
       }
+      /* Hero cycling text — allow wrap on mobile */
+      .hero-cycle-wrap {
+        white-space: normal;
+        text-align: center;
+      }
       .nav-links {
         display: none;
       }
@@ -1013,34 +1018,45 @@
         max-width: 100%;
       }
 
-      /* Display cards — scale down deck */
+      /* Display cards — vertical list on mobile */
       .display-cards-stage {
-        padding: 16px 16px 90px 16px;
-        justify-content: flex-start;
-        overflow: hidden;
+        padding: 0;
+        overflow: visible;
+        justify-content: stretch;
+        width: 100%;
+      }
+      .display-cards {
+        display: flex !important;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        grid-template-areas: unset;
+        place-items: unset;
       }
       .display-card {
-        width: 280px;
-        max-height: 148px;
-        padding: 16px 18px;
+        grid-area: unset !important;
+        position: relative !important;
+        width: 100% !important;
+        max-height: none !important;
+        transform: none !important;
+        filter: none !important;
+        skew: none;
+        padding: 18px 20px;
       }
-      .display-card.dc-active {
-        max-height: 460px;
+      .display-card::after { display: none !important; }
+      .display-card.has-overlay::before { opacity: 0 !important; }
+      .dc-back, .dc-mid2, .dc-mid1, .dc-front {
+        transform: none !important;
+        filter: none !important;
+        z-index: auto !important;
       }
-      .dc-back  { transform: skewY(-8deg) translateX(0px)   translateY(0px); }
-      .dc-mid2  { transform: skewY(-8deg) translateX(36px)  translateY(24px); }
-      .dc-mid1  { transform: skewY(-8deg) translateX(72px)  translateY(48px); }
-      .dc-front { transform: skewY(-8deg) translateX(108px) translateY(72px); }
-
-      .dc-back:not(.dc-active):hover  { transform: skewY(-8deg) translateX(0px)   translateY(-40px); }
-      .dc-mid2:not(.dc-active):hover  { transform: skewY(-8deg) translateX(36px)  translateY(0px); }
-      .dc-mid1:not(.dc-active):hover  { transform: skewY(-8deg) translateX(72px)  translateY(36px); }
-      .dc-front:not(.dc-active):hover { transform: skewY(-8deg) translateX(108px) translateY(60px); }
-
-      .dc-back.dc-active  { transform: skewY(0deg) translateX(0px)   translateY(0px); }
-      .dc-mid2.dc-active  { transform: skewY(0deg) translateX(36px)  translateY(24px); }
-      .dc-mid1.dc-active  { transform: skewY(0deg) translateX(72px)  translateY(48px); }
-      .dc-front.dc-active { transform: skewY(0deg) translateX(108px) translateY(72px); }
+      .dc-back:not(.dc-active):hover,
+      .dc-mid2:not(.dc-active):hover,
+      .dc-mid1:not(.dc-active):hover,
+      .dc-front:not(.dc-active):hover { transform: none !important; }
+      .dc-back.dc-active, .dc-mid2.dc-active,
+      .dc-mid1.dc-active, .dc-front.dc-active { transform: none !important; }
+      .display-card.dc-active { max-height: 560px !important; }
 
       /* Beam section — vertical column layout for mobile */
       .beam-wrap {
@@ -1142,13 +1158,6 @@
     /* Extra small — iPhone SE (375px) */
     @media (max-width: 400px) {
       .hero-title { font-size: 32px; }
-      .display-card { width: 240px; }
-      .dc-mid2  { transform: skewY(-8deg) translateX(30px)  translateY(20px); }
-      .dc-mid1  { transform: skewY(-8deg) translateX(60px)  translateY(40px); }
-      .dc-front { transform: skewY(-8deg) translateX(90px)  translateY(60px); }
-      .dc-mid2.dc-active  { transform: skewY(0deg) translateX(30px) translateY(20px); }
-      .dc-mid1.dc-active  { transform: skewY(0deg) translateX(60px) translateY(40px); }
-      .dc-front.dc-active { transform: skewY(0deg) translateX(90px) translateY(60px); }
       .beam-stage { gap: 24px; max-width: 300px; }
       .beam-circle { width: 48px; height: 48px; }
       .beam-col { gap: 10px; }
@@ -1172,7 +1181,7 @@
       </span>
       <!-- Favicon icon — shown on scroll -->
       <span class="nav-icon" id="navIcon" aria-hidden="true">
-        <img src="brand_assets/Favicon Neuron.png" alt="Neuron" style="width:34px;height:34px;border-radius:7px;display:block;">
+        <img src="brand_assets/Adobe Express - file.png" alt="Neuron" style="width:34px;height:34px;border-radius:7px;display:block;">
       </span>
     </a>
     <ul class="nav-links">
@@ -1295,7 +1304,7 @@
       <!-- Center: Neuron favicon icon -->
       <div class="beam-center-wrap">
         <div class="beam-center-circle" id="bCenter">
-          <img src="brand_assets/Favicon Neuron.png" alt="Neuron" style="width:72px;height:72px;border-radius:12px;display:block;filter:drop-shadow(0 2px 14px rgba(242,110,50,0.30));">
+          <img src="brand_assets/Adobe Express - file.png" alt="Neuron" style="width:72px;height:72px;border-radius:12px;display:block;filter:drop-shadow(0 2px 14px rgba(242,110,50,0.30));">
         </div>
         <span class="beam-center-label">Neuron AI</span>
       </div>
@@ -1422,7 +1431,7 @@
                 Tono, vocabulario y estrategia personalizados para el perfil de cada cliente
               </li>
             </ul>
-            <p style="margin-top:28px;font-size:12px;font-weight:600;color:var(--blue);letter-spacing:0.08em;text-transform:uppercase;">Latency &lt;2s — Indistinguible de un humano</p>
+            <p style="margin-top:28px;font-size:12px;font-weight:600;color:var(--blue);letter-spacing:0.08em;text-transform:uppercase;">&lt;200ms — Indistinguible de un humano</p>
           </div>
         </div>
       </div>
@@ -1445,7 +1454,7 @@
 
           <!-- Left: intro -->
           <div class="pipeline-intro">
-            <div class="latency-badge"><span class="dot"></span>Latency &lt;2s — Respuestas en tiempo real</div>
+            <div class="latency-badge"><span class="dot"></span>&lt;200ms — Respuestas en tiempo real</div>
             <h2 class="section-heading">IA de Voz para<br><span class="accent-orange">cualquier industria</span></h2>
             <p class="pipeline-subtitle">Agentes de voz inteligentes que se adaptan a cualquier caso de uso, sector y escala.</p>
           </div>
