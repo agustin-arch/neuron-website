@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="brand_assets/Favicon%20Neuron.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -30,7 +30,7 @@
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-weight: 300;
       background: var(--bg);
       min-height: 100vh;
@@ -82,7 +82,7 @@
 
     /* ── Typography ── */
     .hero-title {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Cormorant Garamond', sans-serif;
       font-weight: 700;
       font-size: clamp(50px, 5.6vw, 80px);
       line-height: 1.02;
@@ -91,7 +91,7 @@
       text-align: center;
     }
     .step-title {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Cormorant Garamond', sans-serif;
       font-weight: 600;
       font-size: clamp(34px, 4vw, 56px);
       line-height: 1.06;
@@ -99,7 +99,7 @@
       color: var(--text);
     }
     .section-heading {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Cormorant Garamond', sans-serif;
       font-weight: 600;
       font-size: clamp(28px, 3.2vw, 44px);
       line-height: 1.12;
@@ -107,7 +107,7 @@
       color: var(--text);
     }
     .cta-heading {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Cormorant Garamond', sans-serif;
       font-weight: 700;
       font-size: clamp(28px, 3vw, 42px);
       line-height: 1.1;
@@ -214,7 +214,7 @@
     /* ── Buttons ── */
     .btn-nav {
       font-size: 13px;
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-weight: 500;
       border: 1px solid var(--orange);
       border-radius: 4px;
@@ -233,7 +233,7 @@
     .btn-orange {
       display: inline-block;
       font-size: 14px;
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-weight: 500;
       background: var(--orange);
       color: #fff;
@@ -252,7 +252,7 @@
     .btn-ghost {
       display: inline-block;
       font-size: 14px;
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-weight: 400;
       background: transparent;
       color: var(--muted);
@@ -449,7 +449,7 @@
       background: rgba(242,110,50,0.12); flex-shrink: 0;
     }
     .dc-icon svg { width: 19px; height: 19px; fill: none; stroke: var(--orange); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-    .dc-title { font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 600; color: var(--orange); letter-spacing: -0.01em; }
+    .dc-title { font-family: 'Cormorant Garamond', sans-serif; font-size: 16px; font-weight: 600; color: var(--orange); letter-spacing: -0.01em; }
     .dc-desc  { font-size: 14px; color: var(--muted); line-height: 1.55; }
     .dc-meta  { font-size: 11px; color: var(--muted2); letter-spacing: 0.07em; text-transform: uppercase; font-weight: 500; }
 
@@ -497,9 +497,9 @@
     .dc-stat {
       padding-top: 12px;
       border-top: 1px solid var(--border);
-      font-family: 'Syne', sans-serif;
+      font-family: 'IBM Plex Mono', monospace;
       font-size: 11px;
-      font-weight: 600;
+      font-weight: 500;
       color: var(--blue);
       letter-spacing: 0.06em;
       text-transform: uppercase;
@@ -550,7 +550,7 @@
       background: linear-gradient(to left, transparent, var(--orange));
     }
     .platform-heading {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Cormorant Garamond', sans-serif;
       font-size: clamp(36px, 4vw, 62px);
       font-weight: 700;
       color: #fff;
@@ -626,7 +626,7 @@
       max-width: 640px;
     }
     .beam-heading {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Cormorant Garamond', sans-serif;
       font-size: clamp(38px, 4.2vw, 60px);
       font-weight: 700;
       color: #fff;
@@ -747,7 +747,7 @@
       object-fit: contain;
     }
     .beam-center-label {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Cormorant Garamond', sans-serif;
       font-size: 11px;
       color: var(--muted2);
       font-weight: 500;
@@ -771,6 +771,7 @@
       border: 1px solid var(--border-hi);
       border-radius: 3px;
       padding: 7px 15px;
+      font-family: 'IBM Plex Mono', monospace;
       font-size: 11px;
       font-weight: 500;
       color: var(--muted);
@@ -827,7 +828,7 @@
       background: linear-gradient(to left, transparent, var(--blue));
     }
     .globe-number {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Cormorant Garamond', sans-serif;
       font-size: clamp(100px, 15vw, 190px);
       font-weight: 800;
       line-height: 0.88;
@@ -836,7 +837,7 @@
       display: block;
     }
     .globe-word {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Cormorant Garamond', sans-serif;
       font-size: clamp(44px, 6.5vw, 90px);
       font-weight: 700;
       line-height: 1.0;
@@ -1416,7 +1417,7 @@
                 Mapeo completo del journey del cliente antes de cada interacción
               </li>
             </ul>
-            <p style="margin-top:28px;font-size:12px;font-weight:600;color:var(--blue);letter-spacing:0.08em;text-transform:uppercase;">Decisiones en &lt; 200ms — antes de que empiece la conversación</p>
+            <p style="margin-top:28px;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;color:var(--blue);letter-spacing:0.08em;text-transform:uppercase;">Decisiones en &lt; 200ms — antes de que empiece la conversación</p>
           </div>
         </div>
       </div>
@@ -1459,7 +1460,7 @@
                 Tono, vocabulario y estrategia personalizados para el perfil de cada cliente
               </li>
             </ul>
-            <p style="margin-top:28px;font-size:12px;font-weight:600;color:var(--blue);letter-spacing:0.08em;text-transform:uppercase;">&lt;200ms — Indistinguible de un humano</p>
+            <p style="margin-top:28px;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;color:var(--blue);letter-spacing:0.08em;text-transform:uppercase;">&lt;200ms — Indistinguible de un humano</p>
           </div>
         </div>
       </div>
