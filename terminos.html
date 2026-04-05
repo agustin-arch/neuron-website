@@ -1,0 +1,258 @@
+<!--
+  =====================================================================
+  TÉRMINOS Y CONDICIONES — Neuron AI Studio
+  =====================================================================
+  IMPORTANTE: Esta es una PLANTILLA GENÉRICA de términos de servicio
+  para SaaS B2B en LatAm/México. NO constituye asesoría legal. DEBE ser
+  revisada por un abogado antes de publicarse en producción, en especial
+  las cláusulas de limitación de responsabilidad, jurisdicción, SLA, y
+  los puntos relacionados con el procesamiento de grabaciones de voz.
+  =====================================================================
+-->
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Términos y Condiciones — Neuron AI Studio</title>
+  <meta name="description" content="Términos y Condiciones de uso de los servicios de Neuron AI Studio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #050505;
+      --surface: #0d0d0e;
+      --border: rgba(255,255,255,0.08);
+      --text: #f5f5f5;
+      --muted: rgba(245,245,245,0.68);
+      --muted2: rgba(245,245,245,0.44);
+      --orange: #f26e32;
+      --blue: #28a1be;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.72;
+      font-size: 16px;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--orange); text-decoration: none; transition: color 0.18s ease; }
+    a:hover { color: #ff8a52; }
+    a:focus-visible { outline: 2px solid var(--orange); outline-offset: 3px; border-radius: 2px; }
+
+    .legal-nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(5,5,5,0.82);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .legal-nav-inner {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 18px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .legal-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 600; font-size: 15px; letter-spacing: 0.02em;
+      color: var(--text);
+    }
+    .legal-brand svg { width: 26px; height: 26px; }
+    .legal-back {
+      font-size: 14px;
+      color: var(--muted);
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+    }
+    .legal-back:hover { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.18); color: var(--text); }
+
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 72px 32px 120px;
+    }
+    .legal-eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-weight: 700;
+      font-size: clamp(36px, 5vw, 56px);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 14px;
+    }
+    .legal-updated {
+      font-size: 13px;
+      color: var(--muted2);
+      margin-bottom: 48px;
+    }
+    h2 {
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      margin-top: 56px;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+    h2 .num {
+      color: var(--orange);
+      font-weight: 700;
+      margin-right: 10px;
+      font-variant-numeric: tabular-nums;
+    }
+    h3 {
+      font-weight: 600;
+      font-size: 16px;
+      margin-top: 28px;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+    p, ul, ol { color: var(--muted); margin-bottom: 16px; }
+    ul, ol { padding-left: 22px; }
+    li { margin-bottom: 8px; }
+    li::marker { color: var(--orange); }
+    strong { color: var(--text); font-weight: 600; }
+
+    .legal-footer {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 28px 32px 64px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--muted2);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .legal-footer a { color: var(--muted); }
+    .legal-footer a:hover { color: var(--orange); }
+
+    @media (max-width: 640px) {
+      .legal-nav-inner { padding: 14px 20px; }
+      main { padding: 48px 20px 80px; }
+      h1 { font-size: 34px; }
+      h2 { font-size: 19px; margin-top: 44px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="legal-nav">
+    <div class="legal-nav-inner">
+      <a href="index.html" class="legal-brand">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="20" r="4.5" stroke="#f26e32" stroke-width="2.2"/>
+          <circle cx="20" cy="20" r="4.5" stroke="#ffffff" stroke-width="2.2"/>
+          <circle cx="32" cy="20" r="4.5" stroke="#f26e32" stroke-width="2.2"/>
+          <line x1="12.5" y1="20" x2="15.5" y2="20" stroke="#ffffff" stroke-width="2.2"/>
+          <line x1="24.5" y1="20" x2="27.5" y2="20" stroke="#ffffff" stroke-width="2.2"/>
+        </svg>
+        Neuron AI Studio
+      </a>
+      <a href="index.html" class="legal-back">← Volver al sitio</a>
+    </div>
+  </nav>
+
+  <main>
+    <p class="legal-eyebrow">Documento Legal</p>
+    <h1>Términos y Condiciones</h1>
+    <p class="legal-updated">Última actualización: 5 de abril de 2026</p>
+
+    <p>Los presentes Términos y Condiciones (los "Términos") regulan el acceso y uso de los servicios ofrecidos por <strong>Neuron AI Studio</strong> (en adelante, "Neuron", "nosotros" o el "Prestador"). Al acceder a nuestro sitio web, registrarte o contratar cualquier servicio, manifiestas tu aceptación total y sin reservas de estos Términos.</p>
+
+    <h2><span class="num">1.</span>Aceptación de los términos</h2>
+    <p>El uso de los servicios de Neuron implica la aceptación plena y sin reservas de todos los términos y condiciones aquí descritos. Si no estás de acuerdo con alguno de ellos, deberás abstenerte de utilizar el servicio.</p>
+
+    <h2><span class="num">2.</span>Descripción del servicio</h2>
+    <p>Neuron provee una plataforma de <strong>agentes de voz con inteligencia artificial</strong> diseñada para automatizar conversaciones telefónicas en casos de uso como atención al cliente, cobranza, ventas y soporte. El servicio incluye, de forma enunciativa más no limitativa:</p>
+    <ul>
+      <li>Creación y configuración de agentes de voz con IA.</li>
+      <li>Integración con sistemas CRM y herramientas del cliente.</li>
+      <li>Panel de analíticas y métricas de campañas.</li>
+      <li>Almacenamiento y procesamiento de grabaciones y transcripciones.</li>
+    </ul>
+    <p>Neuron se reserva el derecho de modificar, suspender o discontinuar cualquier funcionalidad del servicio con previo aviso razonable al Cliente.</p>
+
+    <h2><span class="num">3.</span>Registro de cuenta y credenciales</h2>
+    <p>Para acceder a ciertas funcionalidades, el Cliente deberá registrarse y crear una cuenta proporcionando información veraz, exacta y actualizada. El Cliente es el único responsable de mantener la confidencialidad de sus credenciales de acceso y de todas las actividades que ocurran bajo su cuenta.</p>
+    <p>El Cliente deberá notificar inmediatamente a Neuron sobre cualquier uso no autorizado de su cuenta a través de <a href="mailto:hello@neuronstudio.ai">hello@neuronstudio.ai</a>.</p>
+
+    <h2><span class="num">4.</span>Uso permitido y restricciones</h2>
+    <p>El Cliente se compromete a utilizar el servicio de manera lícita, ética y conforme a los presentes Términos. Queda <strong>expresamente prohibido</strong>:</p>
+    <ul>
+      <li>Utilizar el servicio para fines ilegales, fraudulentos o que atenten contra derechos de terceros.</li>
+      <li>Realizar llamadas automatizadas sin el consentimiento legal correspondiente o en violación a las leyes de protección al consumidor.</li>
+      <li>Intentar acceder sin autorización a sistemas, cuentas o datos de otros usuarios.</li>
+      <li>Realizar ingeniería inversa, descompilar o intentar extraer el código fuente de la plataforma.</li>
+      <li>Transmitir virus, malware o cualquier código dañino.</li>
+      <li>Usar el servicio para generar contenido engañoso, difamatorio, discriminatorio o que incite a la violencia.</li>
+      <li>Revender, sublicenciar o transferir el acceso al servicio sin autorización expresa y por escrito de Neuron.</li>
+    </ul>
+
+    <h2><span class="num">5.</span>Contenido del Cliente y grabaciones</h2>
+    <p>El Cliente conserva la titularidad de todos los datos, grabaciones, transcripciones y demás contenidos que introduzca o genere a través del uso del servicio (el "Contenido del Cliente"). El Cliente otorga a Neuron una licencia limitada, no exclusiva y mundial para procesar dicho contenido con el único fin de proveer el servicio contratado.</p>
+    <p>El Cliente es el <strong>único responsable</strong> de obtener todos los consentimientos, avisos y autorizaciones necesarios de los usuarios finales (por ejemplo, notificar que la llamada será grabada) conforme a las leyes aplicables de protección de datos personales y telecomunicaciones.</p>
+
+    <h2><span class="num">6.</span>Propiedad intelectual</h2>
+    <p>Todos los derechos de propiedad intelectual sobre la plataforma, software, diseño, logotipos, marcas, documentación y demás elementos del servicio son propiedad exclusiva de Neuron o sus licenciantes, y están protegidos por las leyes mexicanas e internacionales aplicables.</p>
+    <p>La aceptación de estos Términos no otorga al Cliente ningún derecho sobre la propiedad intelectual de Neuron distinto a la licencia de uso limitada necesaria para utilizar el servicio conforme a lo pactado.</p>
+
+    <h2><span class="num">7.</span>Planes, precios y pagos</h2>
+    <p>Los precios, planes y modalidades de contratación del servicio se detallarán en la propuesta comercial o contrato marco firmado entre las partes. Los pagos se realizarán conforme a lo acordado en dicho documento.</p>
+    <p>Neuron podrá suspender el servicio en caso de falta de pago o incumplimiento de las obligaciones económicas del Cliente, previa notificación.</p>
+
+    <h2><span class="num">8.</span>Nivel de servicio y disponibilidad</h2>
+    <p>Neuron se esfuerza por mantener el servicio disponible de forma continua, sin embargo, no garantiza una disponibilidad ininterrumpida. Podrán existir interrupciones por mantenimiento programado, actualizaciones o causas de fuerza mayor. Los acuerdos específicos de nivel de servicio (SLA) se definirán, en su caso, en el contrato marco con el Cliente.</p>
+
+    <h2><span class="num">9.</span>Limitación de responsabilidad</h2>
+    <p>En la máxima medida permitida por la ley aplicable, Neuron <strong>no será responsable</strong> por daños indirectos, incidentales, especiales, consecuenciales o punitivos, incluyendo pérdida de ingresos, utilidades, datos o reputación, derivados del uso o la imposibilidad de uso del servicio.</p>
+    <p>La responsabilidad total y acumulada de Neuron frente al Cliente, por cualquier causa, no excederá el monto pagado por el Cliente a Neuron en los <strong>doce (12) meses</strong> anteriores al evento que dio origen a la reclamación.</p>
+
+    <h2><span class="num">10.</span>Indemnización</h2>
+    <p>El Cliente se obliga a mantener indemne a Neuron, sus directores, empleados y colaboradores, frente a cualquier reclamación, demanda, pérdida o daño derivado del uso indebido del servicio, violación de estos Términos o infracción de derechos de terceros.</p>
+
+    <h2><span class="num">11.</span>Terminación</h2>
+    <p>Cualquiera de las partes podrá dar por terminada la relación contractual conforme a lo establecido en el contrato marco aplicable. Neuron podrá suspender o cancelar el acceso del Cliente de forma inmediata en caso de incumplimiento material de estos Términos, uso ilícito del servicio, o falta de pago reiterada.</p>
+    <p>Tras la terminación, el Cliente dejará de tener acceso al servicio. Neuron conservará los datos del Cliente únicamente por el tiempo necesario para cumplir con obligaciones legales o contractuales.</p>
+
+    <h2><span class="num">12.</span>Modificaciones a los términos</h2>
+    <p>Neuron se reserva el derecho de modificar estos Términos en cualquier momento. Las modificaciones entrarán en vigor a partir de su publicación en esta página. Se notificará al Cliente sobre cambios materiales con al menos 15 días de anticipación. El uso continuado del servicio después de dichas modificaciones constituirá la aceptación de los nuevos Términos.</p>
+
+    <h2><span class="num">13.</span>Legislación aplicable y jurisdicción</h2>
+    <p>Estos Términos se rigen e interpretan conforme a las leyes de los <strong>Estados Unidos Mexicanos</strong>. Para la resolución de cualquier controversia, las partes se someten expresamente a la jurisdicción de los tribunales competentes de [CIUDAD — PENDIENTE DEFINIR], renunciando a cualquier otro fuero que pudiera corresponderles por razón de su domicilio presente o futuro.</p>
+
+    <h2><span class="num">14.</span>Contacto</h2>
+    <p>Para cualquier duda, aclaración o notificación relacionada con estos Términos, puedes contactarnos en:</p>
+    <p><strong>Neuron AI Studio</strong><br>
+    Correo: <a href="mailto:hello@neuronstudio.ai">hello@neuronstudio.ai</a></p>
+  </main>
+
+  <footer class="legal-footer">
+    <div>© 2026 Neuron AI Studio</div>
+    <div>
+      <a href="index.html">Inicio</a> &nbsp;·&nbsp;
+      <a href="privacidad.html">Aviso de Privacidad</a>
+    </div>
+  </footer>
+
+</body>
+</html>
